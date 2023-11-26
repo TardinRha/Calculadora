@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: brown;
+    color: antiquewhite;
+}
+
+button{
+    background-color: gray;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10%;
+}
+
+.button-maior{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 85%;
+    height: 10%;
+}
+
+footer{
+    margin-top: 2%;
+}
+
+header{
+    margin-top: 3%;
+    margin-block-end: 2%;
+}
+
+textarea{
+    margin-top: 8%;
+    margin-block-end: 8%;
+    resize: none;
+    width: 90%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70vh;
+    width: 40vw;
+    background-color: cornflowerblue;
+    border-radius: 5%;
+    color: #000;
+}
+
+
+
+.logo-github{
+    width: 4vw;
+    height: 4vh;
+}
