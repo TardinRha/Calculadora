@@ -1,11 +1,11 @@
 # Calculadora
 
-//EDITAR//
-Uma calculadora desenvolvida utilizando HTML, CSS, Bootstrap e JavaScript.
 
-## Demonstração
+Uma calculadora simples desenvolvida para praticar meus conhecimentos.
 
-colocar link da calculadora após publicar como github
+<!-- ## Demonstração
+
+colocar link da calculadora após publicar como github -->
 
 ## Funcionalidades
 
@@ -16,5 +16,4 @@ colocar link da calculadora após publicar como github
 
 - HTML
 - CSS
-- Bootstrap
 - JavaScript

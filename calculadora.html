@@ -16,41 +16,41 @@
         <h1>Calculadora</h1>
     </header>
     <div class="container">
-        
-        <textarea name="input" id="input" rows="2" readonly></textarea>
-
-        <div id="buttons1" class="div-button">
-            <button>%</button>
-            <button>CE</button>
-            <button>C</button>
-            <button>D</button>
+        <div id="textarea" class="div-textarea">
+            <textarea name="textComplete" id="textComplete" rows="2" readonly></textarea>
+            <textarea name="input" id="input" rows="2" readonly></textarea>
         </div>
-        <div id="buttons2" class="div-button button-maior">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>/</button>
+        <div id="buttons" class="buttons">
+            <div id="buttons1" class="div-button-1">
+                <button id="limpaUltimaEntrada" onclick="apagarUltimaEntrada()">CE</button>
+                <button id="limpaTudo" onclick="limparTudoTextArea()">C</button>
+                <button id="apagarUltimoNumero" onclick="apagarUltimoNumero()">DEL</button>
+            </div>
+            <div id="buttons2" class="div-button">
+                <button id="sete" onclick="clicarButton('sete')">7</button>
+                <button id="oito" onclick="clicarButton('oito')">8</button>
+                <button id="nove" onclick="clicarButton('nove')">9</button>
+                <button id="dividir" onclick="clicarButton('dividir')">÷</button>
+            </div>
+            <div id="buttons3" class="div-button">
+                <button id="quatro" onclick="clicarButton('quatro')">4</button>
+                <button id="cinco" onclick="clicarButton('cinco')">5</button>
+                <button id="seis" onclick="clicarButton('seis')">6</button>
+                <button id="multiplicar" onclick="clicarButton('multiplicar')">x</button>
+            </div>
+            <div id="buttons4" class="div-button">
+                <button id="um" onclick="clicarButton('um')">1</button>
+                <button id="dois" onclick="clicarButton('dois')">2</button>
+                <button id="tres" onclick="clicarButton('tres')">3</button>
+                <button id="subtrair" onclick="clicarButton('subtrair')">-</button>
+            </div>
+            <div id="buttons5" class="div-button">
+                <button id="virgula" onclick="clicarButton('virgula')">,</button>
+                <button id="zero" onclick="clicarButton('zero')">0</button>
+                <button id="igualdade"s onclick="botaoIgualdade()">=</button>
+                <button id="somar" onclick="clicarButton('somar')">+</button>
+            </div>
         </div>
-        <div id="buttons3" class="div-button button-maior">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>X</button>
-        </div>
-        <div id="buttons4" class="div-button button-maior">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>-</button>
-        </div>
-        <div id="buttons5" class="div-button button-maior">
-            <button>2√x</button>
-            <button>0</button>
-            <button>3</button>
-            <button>,</button>
-        </div>
-        <button>=</button>
-
     </div>
     
     <footer>
