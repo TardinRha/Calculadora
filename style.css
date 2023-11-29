@@ -46,6 +46,8 @@ button{
 
 footer{
     margin-top: 2%;
+    display: flex;
+    align-items: center;
 }
 
 header{
@@ -61,7 +63,7 @@ header{
     border-radius: 10px;
     width: 90%;
     padding: 5px;
-    margin-top: 15px;
+    margin-top: 4px;
 }
 
 textarea{
@@ -69,6 +71,9 @@ textarea{
     width: 80%;
     background-color: cornflowerblue;
     border: none;
+    font-size: large;
+    height: 20px;
+    text-align: right;
 }
 
 .container{
@@ -76,12 +81,12 @@ textarea{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 70%;
-    width: 50%;
+    height: 60%;
+    width: 40%;
     background-color: cornflowerblue;
     border-radius: 5%;
     color: #000;
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .logo-github{

@@ -3,9 +3,9 @@
 
 Uma calculadora simples desenvolvida para praticar meus conhecimentos.
 
-<!-- ## Demonstração
+## Demonstração
 
-colocar link da calculadora após publicar como github -->
+https://tardinrha.github.io/Calculadora/
 
 ## Funcionalidades
 

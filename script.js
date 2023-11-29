@@ -120,6 +120,32 @@ function clicarButton(id){
         if(id === "virgula"){
             textareaInferior.textContent += ".";
         }
+        entrada2 = Number(textareaInferior.textContent);
+
+        if(id === "somar"){
+            botaoIgualdade();
+            operador = "+";
+            textareaSuperior.textContent = textareaInferior.textContent + " + ";
+            textareaInferior.textContent = "";
+        }
+        if(id === "subtrair"){
+            botaoIgualdade();
+            operador = "-";
+            textareaSuperior.textContent = textareaInferior.textContent + " - ";
+            textareaInferior.textContent = "";
+        }
+        if(id === "dividir"){
+            botaoIgualdade();
+            operador = "/";
+            textareaSuperior.textContent = textareaInferior.textContent + " / ";
+            textareaInferior.textContent = "";
+        }
+        if(id === "multiplicar"){
+            botaoIgualdade();
+            operador = "*";
+            textareaSuperior.textContent = textareaInferior.textContent + " * ";
+            textareaInferior.textContent = "";
+        }
     }
 }
 
@@ -128,7 +154,6 @@ function clicarButton(id){
  //acrescenta o segundo valor na tela de cima
  //mostra o resultado da operação na tela de baixo
 function botaoIgualdade(){
-    entrada2 = Number(textareaInferior.textContent);
     textareaSuperior.textContent += textareaInferior.textContent + " = ";
 
     if(operador === "+"){
