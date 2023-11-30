@@ -62,6 +62,7 @@ header{
     border: solid 2px;
     border-radius: 10px;
     width: 90%;
+    max-width: 520px;
     padding: 5px;
     margin-top: 4px;
 }
@@ -81,12 +82,13 @@ textarea{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 60%;
+    height: 45vh;
     width: 40%;
     background-color: cornflowerblue;
     border-radius: 5%;
     color: #000;
-    padding-top: 20px;
+    max-width: 559px;
+    padding-top: 29px;
 }
 
 .logo-github{

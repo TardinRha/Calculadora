@@ -1,7 +1,7 @@
 # Calculadora
 
 
-Uma calculadora simples desenvolvida para praticar meus conhecimentos.
+Uma calculadora simples desenvolvida para praticar meus conhecimentos em JavaScript, HTML e CSS considerando que minha linguagem principal é C#/.NET.
 
 ## Demonstração
 

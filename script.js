@@ -8,6 +8,10 @@ let textareaInferior = document.getElementById("input");
 function limparTudoTextArea(){
     textareaSuperior.textContent = "";
     textareaInferior.textContent = "";
+    entrada1 = 0;
+    entrada2 = 0;
+    operador = "";
+    resultado = 0;
 }
 
 function apagarUltimaEntrada(){
@@ -18,15 +22,9 @@ function apagarUltimoNumero(){
     textareaInferior.textContent = textareaInferior.textContent.slice(0, textareaInferior.textContent.length - 1);
 }
 
- //clicar no botão
- //se o operador nao tiver sido escolhido
- //mostra o valor na tela
- //se o operador for selecionado
- //mostra o valor formado pra tela de cima junto com o operador
- //proximo passo é selecionar o segundo valor da operação
- 
 function clicarButton(id){
     if(!operador){
+        
         if(id === "zero"){
             textareaInferior.textContent += "0";
         }
@@ -60,30 +58,34 @@ function clicarButton(id){
         if(id === "virgula"){
             textareaInferior.textContent += ".";
         }
+        
+        if(!textareaInferior.textContent){
+            entrada1 = 0;
+        }
+        entrada1 = Number(textareaInferior.textContent);
+        
         if(id === "somar"){
             operador = "+";
-            entrada1 = Number(textareaInferior.textContent);
             textareaSuperior.textContent = textareaInferior.textContent + " + ";
             textareaInferior.textContent = "";
         }
         if(id === "subtrair"){
             operador = "-";
-            entrada1 = Number(textareaInferior.textContent);
             textareaSuperior.textContent = textareaInferior.textContent + " - ";
             textareaInferior.textContent = "";
         }
         if(id === "dividir"){
             operador = "/";
-            entrada1 = Number(textareaInferior.textContent);
             textareaSuperior.textContent = textareaInferior.textContent + " / ";
             textareaInferior.textContent = "";
         }
         if(id === "multiplicar"){
+            console.log("multiplicar 1")
             operador = "*";
-            entrada1 = Number(textareaInferior.textContent);
             textareaSuperior.textContent = textareaInferior.textContent + " * ";
             textareaInferior.textContent = "";
         }
+        return;
     }
 
     if(operador !== ""){
@@ -120,42 +122,56 @@ function clicarButton(id){
         if(id === "virgula"){
             textareaInferior.textContent += ".";
         }
+        if(!textareaInferior.textContent){
+            textareaInferior.textContent = "0";
+        }
         entrada2 = Number(textareaInferior.textContent);
 
         if(id === "somar"){
             botaoIgualdade();
             operador = "+";
+            entrada1 = Number(resultado);
             textareaSuperior.textContent = textareaInferior.textContent + " + ";
             textareaInferior.textContent = "";
         }
         if(id === "subtrair"){
             botaoIgualdade();
             operador = "-";
+            entrada1 = Number(resultado);
             textareaSuperior.textContent = textareaInferior.textContent + " - ";
             textareaInferior.textContent = "";
         }
         if(id === "dividir"){
             botaoIgualdade();
             operador = "/";
+            entrada1 = Number(resultado);
             textareaSuperior.textContent = textareaInferior.textContent + " / ";
             textareaInferior.textContent = "";
         }
         if(id === "multiplicar"){
             botaoIgualdade();
             operador = "*";
+            entrada1 = Number(resultado);
             textareaSuperior.textContent = textareaInferior.textContent + " * ";
             textareaInferior.textContent = "";
         }
     }
 }
 
-//se clicar no botão de igual
- //executar a operação de acordo com o operador
- //acrescenta o segundo valor na tela de cima
- //mostra o resultado da operação na tela de baixo
 function botaoIgualdade(){
-    textareaSuperior.textContent += textareaInferior.textContent + " = ";
+    if(!entrada1 || !entrada2) return;
 
+    if(textareaSuperior.textContent !== "" && operador == ""){
+        textareaSuperior.textContent = "0";
+        entrada1 = 0;
+        entrada2 = 0;
+        resultado = "";
+        textareaInferior.textContent = resultado;
+        return;
+    }
+
+    textareaSuperior.textContent += textareaInferior.textContent + " =";
+    
     if(operador === "+"){
         resultado = entrada1 + entrada2;
     }
